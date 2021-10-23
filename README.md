@@ -1,1 +1,3 @@
-# SysAdmin Toca do Tux
+# Da migração à administração de Sistemas linux
+
+- Anotações dos comandos em arquivos txt
