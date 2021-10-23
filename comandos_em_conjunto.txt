@@ -1,0 +1,18 @@
+Comandos em conjunto:
+Exemplos:
+
+pwd ; ls -l; touch arq.txt
+
+pwd && ls    <-- caso primeiro comando dê certo, execute o proximo.
+pw && ls    <-- caso primeiro comando não estiver certo, ele não executa o pŕoximo
+pw || ls    <-- se o primeiro não der certo ele executa o pŕoximo
+             obs: (Se o primeiro der certo, ele não executa o próximo)
+
+lspci | grep VGA              <-- | grep nome para filtrar o que vc quer que apareça somente
+
+  &           <-- serve para jogar uma aplicação para segundo plano
+ exemplo        <-- (cp -r imagem.jpg ~/Imagens &)
+  jobs        <-- para ver o que está executando em segundo plano
+saída na tela <--  [1] + running cp -r imagem.jpg ~/Imagens
+ fg %1         <-- trazendo para frente    crtl + z pausa o processo
+ kill %1      <-- para o processo 

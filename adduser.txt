@@ -1,0 +1,20 @@
+Criando usuário   
+(EXECUTAR SEMPRE COMO ROOT   <--  su - root)
+
+adduser nome_usuario       <-- para criar usuario
+passwd  nome_usuario       <-- para mudar senha, após executar o comando, ele pedirá a nova senha
+deluser --help 
+deluser usuario         <-- para deletar usuario
+
+passwd -S nome_usuario     <-- para mostrar o status do usuario
+passwd -l nome_usuario     <-- para travar o terminal do usuario ex: ele não consiguirá logar
+passwd -u nome_usuario     <-- para destravar
+passwd -x nome_usuario     <-- para definir em quanto tempo a senha poderá ser alterada
+
+chage -l usuario         <-- mudar a informação de quando expira a senha do usuario
+
+gpasswd --help
+gpasswd -a   <-- adiciona o usuario ao grupo  (ex, ao grupo sudo, audio, bluetooth, cdrom etc- existem varios outros grupos)
+gpasswd -d   <-- deleta o usuario do grupo
+gpasswd -r   <-- remove a senha do grupo
+                     

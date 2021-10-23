@@ -1,0 +1,24 @@
+users
+whoami
+who
+w
+arch   <-- para ver se a arquiterua é 32bits ou 64bits
+hostnamectl  <-- mostra informações completa do sistema (o mais indicado)
+uname 
+uname -r
+uname -a   <-- mostra o nome da distribuição, versão e kernel
+uname -m   <-- o mesmo que arch
+
+lsb_release -a  <-- mostra nome da distribuição, versão, codenome
+cat /etc/os_release  <-- mostra o site da distribuição
+
+df -h e lsblk   <-- mostra os particionamento de disco
+
+lspci <-- mostra todas as conexões ex usb, placa de rede
+
+MUDAR A ORDEM DE BOOT
+cd /etc/grub.d/      <-- ir para o diretório
+ls                 <-- listar
+sudo mv 30_os-prober 09_os-prober  <-- renomear mudará a ordem pois 09_os-prober 
+                                       buscará boot de qualquer outro OS antes do linux 10_linux
+sudo update-grub    <-- após esse comando, reinicializar o sistema

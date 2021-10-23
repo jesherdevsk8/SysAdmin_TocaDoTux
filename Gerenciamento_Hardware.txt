@@ -1,0 +1,46 @@
+
+Informações sobre hardware
+
+lspci     <-- list all PCI devices - só nao mostra o USB 
+lspci -k  <-- para saber somente ver qual driver está utilizando
+lspci -v  <-- para obter mais detalhes de cada hardware
+
+man lspci - leia o manual para mais informações
+
+/sbin/modinfo nvidia  <- para obter mais informações sobre o drive
+
+lsusb  <-- para mostrar os dispositivos usb conectados
+
+lscpu  <-- mostra informações da cpu
+cat /proc/cpuinfo   <-- mostra informações por nucleo
+
+
+--- Obter informações do boot do kernel
+
+sudo apt install aptitude
+aptitude search show dmesg
+aptitude install dmesg
+
+dmesg | less   <-- consegue ver oq foi carregado no processo de boot
+
+dmesg | grep --color cpu
+dmesg | grep --color vga   <-- ambos comandos filtram especificadamente informações
+
+sensors   <-- para ver temperatura do processador e gpu
+
+aptitude install hddtemp   <-- hddtemp para ver temperatura do hd ou ssd
+
+sudo hddtemp /dev/sda
+
+free -h   <-- ver consumo de memoria
+
+swapon /dev/sda  <- ativa swap
+swapoff /dev/sda <- desativa swap
+swapon -s  <- para verificar qual partição possui o swap
+
+cat /etc/fstab <- onde vejo UUID do dispositivo, qual a partição q está swap
+
+eject  <- abre gaveta de cd
+eject -t fecha gaveta de cd
+
+watch free -h   <- vê o consumo da memoria em tempo real

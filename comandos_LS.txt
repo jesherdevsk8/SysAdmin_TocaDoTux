@@ -1,0 +1,19 @@
+ls -ld MeuDIretório    <--- para mostrar somente ele, para fins de mudar permissões
+
+lsblk    <-- mostra arquivos em bloco
+
+lscpu    <-- mostra informações do processador
+
+lspci -v     <-- mostra todos tipos de placas q tenho em detalhe
+
+lspci -k     <-- mostra dispositivo com somente o driver
+
+lsusb     <-- mostra todas entradas usb
+
+lsmod   <-- mostra os módulos que estão sendo utilizados para fazer funcionar o hardware
+
+lsb_release -a  <-- mostra informações do meu sistema, qual versão que estou usando etc
+
+(importante digitar o comando ls e teclar "tab" para mostrar as opções)
+
+

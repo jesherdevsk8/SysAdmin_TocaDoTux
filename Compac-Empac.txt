@@ -1,0 +1,36 @@
+Des/compactadores Des/empacotadores -- Comandos
+
+ZIP
+sudo zip -rv diretorio backupDir
+unzip backupDir / descompactar-descomprimir
+
+Gzip = z
+tar zcpvf diretorio.tar.gz backupDir
+tar xzf diretorio.tar.gz / descompactar-descomprimir
+
+Bzip2 = j
+tar jcpvf diretorio.tar.bz2 backupDir
+tar xjf diretorio.tar.bz2
+
+Xz = J
+tar Jcpvf diretorio.tar.xz backupdir
+tar xJf diretorio.tar.xz
+
+-------------------
+
+du -sh *   <- Comando para verificar o tamanho da compressão
+
+-------------------
+Outra forma e um pouco mais demorada de se fazer
+Agrupar = tar
+
+tar cpvf diretorio.tar diretorio
+
+gzip -k diretorio.tar   | -k para manter o arquivo diretorio.tar
+gunzip diretorio.tar.gz
+
+bzip2 -k diretorio.tar
+bunzip diretorio.tar.bz2
+
+xz -k diretorio.tar
+unxz diretorio.tar.xz

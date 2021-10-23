@@ -1,0 +1,47 @@
+Mudando permissões na forma escrita
+ex:
+
+comando bom para ver as propriedades de permissões especiais:
+file nome_do_arq   <-- serve para ver o que esse arquivo é
+
+touch arq-ex.txt     <-- para criar arquivo
+ls -ld arq-ex.txt    <-- para lista-lo com as permissões
+
+( u  g  o )      < usuário(dono) - grupo - outros
+-rw-r--r-- 1 jesher jesher 0 jul 19 21:28 arq-ex.txt
+
+chmod u=rwx,g=rwx,o=rwx arq-ex.txt
+-rwxrwxrwx 1 jesher jesher 0 jul 19 21:29 arq-ex.txt
+
+---para retirar e re-colocar permissões---
+chmod o-x arq-ex.txt
+
+chmod 0+x arq-ex.txt
+
+comando stat arq-ex.txt   <-- para ver as propriedades
+
+(Agora vamos mudar as permissões especiais)
+
+SETUID (OU SUID)  <-- cor VERMELHA
+ls -ld arq-ex.txt
+chmod u+s arq-ex.txt     <-- permissão especial chamada SETUID (OU SUID) para USUÁRIO
+chmod u-s arq-ex.txt     <-- para tirar a permissão especial
+chmod 4644 arq-ex.txt    <-- tbm muda a permissão especial
+
+SETGID (OU SGID)  <-- cor AMARELADA
+ls -ld arq-ex.txt
+chmod g+s arq-ex.txt     <-- Para mudar GRUPO
+chmod g-s arq-ex.txt
+chmod 2644 arq-ex.txt
+
+STICKY BIT    <-- cor Verde
+stat arq-ex.txt          <-- abre propriedades no terminal
+ls -ld arq-ex.txt
+chmod o+t arq-ex.txt     <-- Para mudar OUTROS
+chmod o-t arq-ex.txt     <-- Para tirar a permissão
+chmod 1644 arq-ex.txt    <-- Colocando novamente
+chmod 0644 arq-ex.txt    <-- Tira permissão novamente
+
+Criar diretório já com permissões especiais
+
+mkdir --mode=1777 Dir-SRICKYBIT   <-- permissão StickybBIT

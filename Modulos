@@ -1,0 +1,19 @@
+ls /lib/modules   <-- lista os kernels instalados
+
+ls /lib/modules/kernel  <-- locais dos drivers, criptografia, arquitetura e etecc
+saída stdout do comando 
+arch  crypto  drivers  fs  kernel  lib  mm  net  security  sound  virt
+
+lsmod   <-- verificar os drivers q estão carregados
+
+modinfo nvidia <-- mostra informações do driver escolhido
+
+lsmod | grep pcspkr 
+
+modinfo pcspkr   <- PC Speaker beeper driver
+
+modprobe --help   / para informações do comando
+
+modprobe -r pcspkr   <-- para parar o speaker do terminal
+
+modprobe pcspkr   <-- para reativalo

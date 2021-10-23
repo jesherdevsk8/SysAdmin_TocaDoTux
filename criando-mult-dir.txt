@@ -1,0 +1,25 @@
+CRIANDO MULTIPLOS SUBDIRETÓRIOS
+
+exemplo:
+
+PROJETOS
+-MEU BLOG
+   --SITE
+	--HTML
+	--CSS
+	--JS
+   --IMG
+   --VIDEOS
+-SRC
+   --SASS
+   --TS
+
+Comando simples para criar um diretório com dois diretórios dentro
+
+mkdir -p src/{pasta1, pasta2}
+
+Criando multiplos diretorios
+
+mkdir -p Projetos/{Meu blog/{img/{emy,pri,tufi},site/{html,css,js},videos},src/{sass,ts}}
+
+
